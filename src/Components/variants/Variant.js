@@ -9,7 +9,7 @@ const Variant = ({ classes, ...props }) => {
     const activeIndex = useSelector(state => state.reducer.id);
     console.log(activeIndex)
     const getVariantData = async (id) => {
-        const myRequest = new Request('http://node-express-env.eba-t3mtkprp.us-east-2.elasticbeanstalk.com/variant', {
+        const myRequest = new Request('http://tshirt.hemdennachmass.com/variant', {
             method: 'GET',
             headers: { id },
             mode: 'cors',
