@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tshirtapp/static/css/main.a617e044.chunk.css",
-    "main.js": "/tshirtapp/static/js/main.a927e568.chunk.js",
-    "main.js.map": "/tshirtapp/static/js/main.a927e568.chunk.js.map",
+    "main.js": "/tshirtapp/static/js/main.f86ece65.chunk.js",
+    "main.js.map": "/tshirtapp/static/js/main.f86ece65.chunk.js.map",
     "runtime-main.js": "/tshirtapp/static/js/runtime-main.29f64a4a.js",
     "runtime-main.js.map": "/tshirtapp/static/js/runtime-main.29f64a4a.js.map",
     "static/js/2.c9c5a334.chunk.js": "/tshirtapp/static/js/2.c9c5a334.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.29f64a4a.js",
     "static/js/2.c9c5a334.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.a927e568.chunk.js"
+    "static/js/main.f86ece65.chunk.js"
   ]
 }
