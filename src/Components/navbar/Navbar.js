@@ -16,10 +16,10 @@ const Navbar = ({ classes }) => {
                     <div className={classes.userCart}>
                         <div className={classes.cartText}>
                             <Typography variant='h6' sx={{ fontSize: '13px', fontWeight: 'light' }}>
-                                Lor Warkorab
+                                Warenkorb
                             </Typography>
                             <Typography variant='h6' sx={{ fontSize: '13px', fontWeight: 'light' }}>
-                                Enta 0 aklt
+                                Test
                             </Typography>
                         </div>
                         <div className={classes.cartLogo}>
