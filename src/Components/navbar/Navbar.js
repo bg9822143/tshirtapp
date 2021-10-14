@@ -9,7 +9,7 @@ const Navbar = ({ classes }) => {
             <div className={classes.navHeaderMiddle}>
                 <div className={classes.headerlogo}>
                     <Link to='/'>
-                    WALBUSCH
+                    Hemden
                     </Link>
                 </div>
                 <div className={classes.headerUserParent}>
