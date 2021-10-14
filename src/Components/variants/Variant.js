@@ -9,7 +9,7 @@ const Variant = ({ classes, ...props }) => {
     const activeIndex = useSelector(state => state.reducer.id);
     console.log(activeIndex)
     const getVariantData = async (id) => {
-        const myRequest = new Request('https://api.hemdennachmass.com/variant', {
+        const myRequest = new Request('https://ceapi.hemdennachmass.com/variant', {
             method: 'GET',
             headers: { id },
             mode: 'cors',
