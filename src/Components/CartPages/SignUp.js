@@ -8,12 +8,9 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import MaterialLink from '@mui/material/Link';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
-import TextField from '@mui/material/TextField';
 
 import FormControl from '@mui/material/FormControl';
-import Input from '@mui/material/Input';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -49,8 +46,8 @@ const SignUp = ({ classes }) => {
                             onChange={handleChange}
                             sx={{ backgroundColor: '#fff' }}
                         >
-                            <MenuItem value='male' sx={{ fontSize: '13px' }}>Male</MenuItem>
-                            <MenuItem value='female' sx={{ fontSize: '13px' }}>Female</MenuItem>
+                            <MenuItem value='male' sx={{ fontSize: '14px' }}>Male</MenuItem>
+                            <MenuItem value='female' sx={{ fontSize: '14x' }}>Female</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>
@@ -103,8 +100,8 @@ const SignUp = ({ classes }) => {
                             onChange={handleCountryChange}
                             sx={{ backgroundColor: '#fff', fontSize: '12px' }}
                         >
-                            <MenuItem value='male' sx={{ fontSize: '13px' }}>Pakistan</MenuItem>
-                            <MenuItem value='female' sx={{ fontSize: '13px' }}>Ireland</MenuItem>
+                            <MenuItem value='male' sx={{ fontSize: '14px' }}>Pakistan</MenuItem>
+                            <MenuItem value='female' sx={{ fontSize: '14px' }}>Ireland</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>
@@ -123,7 +120,7 @@ const SignUp = ({ classes }) => {
                         <img src='https://konfigurator.walbusch.de/savedconfigurations/XR026A_s.png' width='100%' />
                     </Box>
                     <Box>
-                        <Typography variant='h6' sx={{ fontSize: '15px', fontWeight: 'bold' }}>
+                        <Typography variant='h6' sx={{ fontSize: '16px', fontWeight: 'bold' }}>
                             1x made-to-measure shirt
                         </Typography>
                         <List sx={{ width: '100%', maxWidth: 360, fontSize: '14px', lineHeight: '0.7px' }}>
@@ -155,12 +152,12 @@ const SignUp = ({ classes }) => {
                     </Box>
                     <Grid container spacing={3} sx={{ margin: '10px', display: 'flex', alignItems: 'center' }}>
                         <Grid xs={8}>
-                            <Typography variant='p' sx={{ fontSize: '13px', display: 'flex' }}>
+                            <Typography variant='p' sx={{ fontSize: '14px', display: 'flex' }}>
                                 <Brightness1Icon fontSize='small' color='success' />   Delivery in 3-4 weeks
                             </Typography>
                         </Grid>
                         <Grid xs={4}>
-                            <Typography variant='p' sx={{ fontSize: '13px' }}>
+                            <Typography variant='p' sx={{ fontSize: '14px' }}>
                                 € 110.00
                             </Typography>
                         </Grid>
@@ -171,24 +168,24 @@ const SignUp = ({ classes }) => {
                     <Box container sx={{ width: '98%', marginTop: '10px', marginLeft: '12px', }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                             <Box sx={{ width: '25%' }}>
-                                <Typography variant='p' sx={{ fontSize: '13px', textAlign: 'left' }}>
+                                <Typography variant='p' sx={{ fontSize: '14px', textAlign: 'left' }}>
                                     Shipping
                                 </Typography>
                             </Box>
                             <Box sx={{ width: '25%' }}>
-                                <Typography variant='p' sx={{ fontSize: '13px', paddingLeft: '15%' }}>
+                                <Typography variant='p' sx={{ fontSize: '14px', paddingLeft: '15%' }}>
                                     € 110.00
                                 </Typography>
                             </Box>
                         </Box>
                         <Box xs={6} sx={{ display: 'flex', justifyContent: 'space-between' }}>
                             <Box sx={{ width: '20%' }}>
-                                <Typography variant='p' sx={{ fontSize: '13px' }}>
+                                <Typography variant='p' sx={{ fontSize: '14px' }}>
                                     Total
                                 </Typography>
                             </Box>
                             <Box sx={{ width: '20%' }}>
-                                <Typography variant='p' sx={{ fontSize: '11px' }}>
+                                <Typography variant='p' sx={{ fontSize: '14px' }}>
                                     € 110.00
                                 </Typography>
                             </Box>

@@ -55,7 +55,6 @@ function MaterialCollapse() {
                 display: 'flex',
                 flexWrap: 'wrap',
                 justifyContent: 'space-between',
-
                 margin: '10px'
               }}>
                 <Box sx={{

@@ -20,8 +20,8 @@ const BodyMeasurements = ({ classes }) => {
     return (
         <Box className={classes.measurementSelectionContainer}>
             <Box className={classes.measurementChoices} sx={{marginTop:'10px',padding:'10px'}}>
-                <Typography variant='h6' sx={{ fontSize: '15px', fontWeight: 'bold' }}>Please specify sizes</Typography>
-                <Grid container spacing={3} sx={{fontSize:'13px',paddingTop:'15px'}}>
+                <Typography variant='h6' sx={{ fontSize: '16px', fontWeight: 'bold' }}>Please specify sizes</Typography>
+                <Grid container spacing={3} sx={{fontSize:'14px',paddingTop:'15px'}}>
                     <Grid item xs={5}>
                     Neck circumference
                     </Grid>
@@ -32,7 +32,7 @@ const BodyMeasurements = ({ classes }) => {
                     (34 - 54 cm)
                     </Grid>
                 </Grid>
-                <Grid container spacing={3} sx={{fontSize:'13px',paddingBottom:'5px'}}>
+                <Grid container spacing={3} sx={{fontSize:'14px',paddingBottom:'5px'}}>
                     <Grid item xs={5}>
                     Chest circumference
                     </Grid>
@@ -43,7 +43,7 @@ const BodyMeasurements = ({ classes }) => {
                     (34 - 54 cm)
                     </Grid>
                 </Grid>
-                <Grid container spacing={3} sx={{fontSize:'13px',paddingBottom:'3px'}}>
+                <Grid container spacing={3} sx={{fontSize:'14px',paddingBottom:'3px'}}>
                     <Grid item xs={5}>
                     Waist circumference
                     </Grid>
@@ -54,7 +54,7 @@ const BodyMeasurements = ({ classes }) => {
                     (34 - 54 cm)
                     </Grid>
                 </Grid>
-                <Grid container spacing={3} sx={{fontSize:'13px',paddingBottom:'5px'}}>
+                <Grid container spacing={3} sx={{fontSize:'14px',paddingBottom:'5px'}}>
                     <Grid item xs={5}>
                         Collar size
                     </Grid>
@@ -65,7 +65,7 @@ const BodyMeasurements = ({ classes }) => {
                     (34 - 54 cm)
                     </Grid>
                 </Grid>
-                <Grid container spacing={3} sx={{fontSize:'13px',paddingBottom:'5px'}}>
+                <Grid container spacing={3} sx={{fontSize:'14px',paddingBottom:'5px'}}>
                     <Grid item xs={5}>
                     Shoulder width
                     </Grid>
@@ -76,7 +76,7 @@ const BodyMeasurements = ({ classes }) => {
                     (34 - 54 cm)
                     </Grid>
                 </Grid>
-                <Grid container spacing={3} sx={{fontSize:'13px',paddingBottom:'5px'}}>
+                <Grid container spacing={3} sx={{fontSize:'14px',paddingBottom:'5px'}}>
                     <Grid item xs={5}>
                     Arm length
                     </Grid>
@@ -87,7 +87,7 @@ const BodyMeasurements = ({ classes }) => {
                     (34 - 54 cm)
                     </Grid>
                 </Grid>
-                <Grid container spacing={3} sx={{fontSize:'13px',paddingBottom:'5px'}}>
+                <Grid container spacing={3} sx={{fontSize:'14px',paddingBottom:'5px'}}>
                     <Grid item xs={5}>
                     Shirt length
                     </Grid>
@@ -104,8 +104,8 @@ const BodyMeasurements = ({ classes }) => {
                 <img src="https://konfigurator.walbusch.de/images/91f0729.png" />
             </Box>
             <Box className={classes.measurementdescription}>
-                <Typography variant='h6' sx={{ fontSize: '15px', fontWeight: 'bold' }}>How to find out your shoulder width</Typography>
-                <Typography variant='p' sx={{ fontSize: '13px' }}>Measure the shoulder width on the front of the shirt spread out flat. Open the collar slightly and press it flat. The measuring line runs in a straight line between the two corner points of the shoulder and is limited by the base of the sleeves.</Typography>
+                <Typography variant='h6' sx={{ fontSize: '16px', fontWeight: 'bold' }}>How to find out your shoulder width</Typography>
+                <Typography variant='p' sx={{ fontSize: '14px' }}>Measure the shoulder width on the front of the shirt spread out flat. Open the collar slightly and press it flat. The measuring line runs in a straight line between the two corner points of the shoulder and is limited by the base of the sleeves.</Typography>
             </Box>
         </Box>
     )

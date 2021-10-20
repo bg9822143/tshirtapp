@@ -7,11 +7,13 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { withStyles } from '@material-ui/styles';
 import { styles } from './variants.style';
 import MaterialCollapse from '../collapse/MaterialCollapse';
 import DetailsModal from '../DetailModal/DetailsModal';
+import { getReplacementOption } from '../../redux/actions/thunkActions';
+import { selectCurrentVariant } from '../../redux/selectors';
 
 const message = `Truncation should be conditionally applicable on this long line of text
  as this is a much longer  `;
@@ -25,7 +27,12 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function VariantSubCard({ classes }) {
 
-    const variantState = useSelector(state => state.reducer.variants);
+    const dispatch = useDispatch();
+    const currentVariant = useSelector(selectCurrentVariant);
+
+    const handleVariantChange = (value) => {
+        dispatch(getReplacementOption(value));
+    }
     return (
         <Card sx={{
             // boxShawdow:'none',
@@ -36,28 +43,32 @@ function VariantSubCard({ classes }) {
             borderBottom: 'none'
         }}>
             <CardContent>
-                {(variantState.id === 'stoff12') ? <Grid>
+                {(currentVariant.id === 'stoff') ? <Grid>
                     <MaterialCollapse />
                 </Grid> : null}
             </CardContent>
             <CardContent >
                 <Box>
-                    {variantState.collection.map((item) => {
-                        return <Grid container spacing={2} alignItems="center" className={classes.gridContent}>
+                    {currentVariant.collection.map((item) => {
+                        return <Grid container spacing={2}
+                            onClick={() => { handleVariantChange(item.identifier); }}
+                            alignItems="center" className={classes.gridContent} >
                             <Grid item xs={3}>
-                                <img src={item.imgSrc} />
+                                <img src={item.inactiveImg} />
                             </Grid>
                             <Grid item xs={7}>
                                 <Typography sx={{
                                     fontSize: '18px',
                                     fontWeight: 'bold'
-                                }} variant='h6' align='left'>{item.variantItem}</Typography>
-                                <Typography variant='p'>Items Are availble in Good Price Items Are availble in Good Price</Typography>
+                                }} variant='h6' align='left'>{item.name}</Typography>
+                                <Typography variant='p'>{item.description}</Typography>
                                 <DetailsModal />
                             </Grid>
+                            { item.price &&
                             <Grid item xs={2}>
-                                <Typography>{item.Price}</Typography>
+                                <Typography>{item.price}</Typography>
                             </Grid>
+                    }
                         </Grid>
 
                     })}

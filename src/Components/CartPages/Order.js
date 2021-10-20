@@ -52,7 +52,7 @@ const Order = ({ classes }) => {
                         </RadioGroup>
                     </FormControl>
                     
-                        <Button fullWidth={true} variant="contained" size="large" color='primary' >
+                        <Button fullWidth={true} variant="contained" size="large" color='primary' className={classes.orderCheckout}>
                         <Link to='/invoice'>     CheckOut   </Link>
                         </Button>
                  
@@ -94,12 +94,12 @@ const Order = ({ classes }) => {
                         </List>
                         <Grid container spacing={4} sx={{ margin: '10px', display: 'flex', alignItems: 'center',border:'1px solid black' }}>
                             <Grid xs={8}>
-                                <Typography variant='p' sx={{ fontSize: '13px', display: 'flex' }}>
+                                <Typography variant='p' sx={{ fontSize: '14px', display: 'flex' }}>
                                     <Brightness1Icon fontSize='small' color='success' />   Delivery in 3-4 weeks
                                 </Typography>
                             </Grid>
                             <Grid xs={4}>
-                                <Typography variant='p' sx={{ fontSize: '13px' }}>
+                                <Typography variant='p' sx={{ fontSize: '14px' }}>
                                     € 110.00
                                 </Typography>
                             </Grid>
@@ -107,24 +107,24 @@ const Order = ({ classes }) => {
                         <Box container sx={{ width: '110%', borderTop: '3px solid silver', marginTop: '10px', marginLeft: '12px' }}>
                             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <Box sx={{ width: '20%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '13px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
                                         Shipping
                                     </Typography>
                                 </Box>
                                 <Box sx={{ width: '28%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '13px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
                                         € 110.00
                                     </Typography>
                                 </Box>
                             </Box>
                             <Box xs={6} sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <Box sx={{ width: '20%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '13px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
                                         Total
                                     </Typography>
                                 </Box>
                                 <Box sx={{ width: '28%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '13px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
                                         € 110.00
                                     </Typography>
                                 </Box>

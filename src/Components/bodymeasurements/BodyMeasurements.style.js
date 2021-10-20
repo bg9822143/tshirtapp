@@ -4,18 +4,23 @@ const styles={
          display:'flex',
          justifyContent:'space-evenly',
         marginTop:'10px',
+        flexWrap:'wrap'
     },
     measurementChoices:{
         textAlign:'left',
-        width:'30%'
+        display:'flex',
+        flexWrap:'wrap',
+        width:'280px',
     },
     measurementImg:{
-        width:'30%'
+        width:'300px',
     },
     measurementdescription:{
-        width:'30%',
+        width:'200px',
         marginTop:'10px',
-        textAlign:'left'
+        textAlign:'left',
+        paddingLeft:'10px',
+        paddingRight:'10px'
         
     },
     inputField:{

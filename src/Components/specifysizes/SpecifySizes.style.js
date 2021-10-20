@@ -10,10 +10,12 @@ const styles={
         textAlign:'left',
         display:'flex',
         flexWrap:'wrap',
-        width:'200px',
+        width:'271px',
     },
     measurementImg:{
-        width:'400px',
+        width:'338px',
+        paddingBottom:'10px',
+        paddingTop:'10px'
     },
     measurementdescription:{
         width:'200px',

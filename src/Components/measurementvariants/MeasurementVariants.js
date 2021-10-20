@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { MeasurementVariantsData } from '../GlobalData';
-import { showMeasurement } from '../../actions/action';
+import { showMeasurement } from '../../redux/actions/actions';
 import { useDispatch } from 'react-redux';
 const MeasurementVariants = ({ classes, ...props }) => {
     console.log(MeasurementVariantsData)
@@ -20,10 +20,10 @@ const MeasurementVariants = ({ classes, ...props }) => {
                         </Box>
                     </Box>
                     <Box className={classes.measurementVariantsTitle}>
-                        <Typography variant='h6' sx={{ fontSize: '15px', fontWeight: 'bold' }}> {item.title}</Typography>
+                        <Typography variant='h6' sx={{ fontSize: '16px', fontWeight: 'bold' }}> {item.title}</Typography>
                     </Box>
                     <Box className={classes.measurementVariantsDescription}>
-                        <Typography variant='p' sx={{ fontSize: '12px' }}>{item.details}</Typography>
+                        <Typography variant='p' sx={{ fontSize: '14px' }}>{item.details}</Typography>
                     </Box>
                 </Box>
             })}

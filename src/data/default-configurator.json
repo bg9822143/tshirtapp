@@ -1,0 +1,469 @@
+{
+    "baseItem": {
+      "identifier": "hemd",
+      "name": "Hemd",
+      "description": null,
+      "longdescription": null,
+      "itemShapes": [
+        {
+          "id": 1,
+          "identifier": "hemd",
+          "name": "Hemd",
+          "itemArticles": [
+            { "identifier": "hemd", "name": "Hemd", "attributes": [] }
+          ]
+        }
+      ],
+      "itemCategories": [{ "identifier": "masshemd", "name": "Maßhemd" }],
+      "hasRecommendation": false,
+      "configurable": true,
+      "deactivated": false,
+      "unavailable": false
+    },
+    "replacementoptionClassifications": {
+      "stoff": {
+        "id": 9,
+        "identifier": "stoff",
+        "name": "Stoff",
+        "is_multiselect": null
+      },
+      "kragen": {
+        "id": 1,
+        "identifier": "kragen",
+        "name": "Kragen",
+        "is_multiselect": null
+      },
+      "passform": {
+        "id": 3,
+        "identifier": "passform",
+        "name": "Passform",
+        "is_multiselect": null
+      },
+      "schnitt": {
+        "id": 4,
+        "identifier": "schnitt",
+        "name": "Ärmellänge",
+        "is_multiselect": null
+      },
+      "knopfleiste": {
+        "id": 5,
+        "identifier": "knopfleiste",
+        "name": "Knopfleiste",
+        "is_multiselect": null
+      },
+      "brusttasche": {
+        "id": 2,
+        "identifier": "brusttasche",
+        "name": "Brusttasche",
+        "is_multiselect": null
+      },
+      "manschette": {
+        "id": 7,
+        "identifier": "manschette",
+        "name": "Manschette",
+        "is_multiselect": null
+      },
+      "monogramm": {
+        "id": 6,
+        "identifier": "monogramm",
+        "name": "Monogramm",
+        "is_multiselect": null
+      },
+      "extras": {
+        "id": 8,
+        "identifier": "extras",
+        "name": "Extras",
+        "is_multiselect": true
+      }
+    },
+    "itemarticlelist": {
+      "stoff": {
+        "id": 71,
+        "replacementoptionShapes": [
+          {
+            "identifier": "8136",
+            "name": "Hemdenpopeline – Uni Rot",
+            "replacementoptionArticles": [
+              {
+                "id": 85,
+                "identifier": "8136",
+                "name": "Hemdenpopeline – Uni Rot",
+                "price": "110.00",
+                "bulkPrices": { "1": "110.00" },
+                "isDefault": true,
+                "unavailable": false,
+                "attributes": {
+                  "filtermuster": [
+                    {
+                      "identifier": "filtermuster",
+                      "value": "uni",
+                      "translatedvalue": "uni",
+                      "is_compatibilityattribute": false,
+                      "datatype": "string"
+                    }
+                  ],
+                  "filterfarbe": [
+                    {
+                      "identifier": "filterfarbe",
+                      "value": "rot",
+                      "translatedvalue": "rot",
+                      "is_compatibilityattribute": false,
+                      "datatype": "string"
+                    }
+                  ],
+                  "optionsdetail_gewicht": [
+                    {
+                      "identifier": "optionsdetail_gewicht",
+                      "value": "125 g/qm",
+                      "translatedvalue": "125 g/qm",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ],
+                  "optionsdetail_garn": [
+                    {
+                      "identifier": "optionsdetail_garn",
+                      "value": "100/2",
+                      "translatedvalue": "100/2",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ],
+                  "optionsdetail_webart": [
+                    {
+                      "identifier": "optionsdetail_webart",
+                      "value": "leinwand",
+                      "translatedvalue": "Leinwand",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ],
+                  "stoffmuster": [
+                    {
+                      "identifier": "stoffmuster",
+                      "value": "uni_rot",
+                      "translatedvalue": "Uni Rot",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ],
+                  "zusatzinformation": [
+                    {
+                      "identifier": "zusatzinformation",
+                      "value": "8136-7",
+                      "translatedvalue": "8136-7",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ]
+                },
+                "compatibilityInfo": []
+              }
+            ]
+          }
+        ],
+        "amountselectable": false,
+        "amount": 0,
+        "identifier": "8136",
+        "name": "Hemdenpopeline",
+        "description": "100 % Baumwolle, 125 g/qm , bügelfrei, trocknergeeignet",
+        "longdescription": "Bei dieser Hemdenpopeline garantiert reine, hautsympathische Baumwolle hohen Tragekomfort und leichte Pflege. Der Stoff ist atmungsaktiv und klimatisierend. Mit seiner gleichmäßigen, glatten Oberfläche und dem typischen zarten Glanz ist der Popeline der perfekte Stoff für ein gepflegtes Maßhemd. Dank »Extraglatt« Ausrüstung sind Hemden aus diesem Stoff bügelfrei.",
+        "itemShapes": [],
+        "itemCategories": [],
+        "hasRecommendation": null,
+        "configurable": null,
+        "deactivated": null,
+        "itemReplacementoptionclassificationReplacementoptionId": 87
+      },
+      "kragen": {
+        "id": 4,
+        "replacementoptionShapes": [
+          {
+            "identifier": "kent",
+            "name": "Kent",
+            "replacementoptionArticles": [
+              {
+                "id": 5,
+                "identifier": "kent",
+                "name": "Kent",
+                "price": null,
+                "bulkPrices": { "1": null },
+                "isDefault": true,
+                "unavailable": false,
+                "attributes": {
+                  "optionskuerzel": [
+                    {
+                      "identifier": "optionskuerzel",
+                      "value": "K8",
+                      "translatedvalue": "K8",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ]
+                },
+                "compatibilityInfo": []
+              }
+            ]
+          }
+        ],
+        "amountselectable": false,
+        "amount": 0,
+        "identifier": "kent",
+        "name": "Kent",
+        "description": "leicht verkürzte Kragenflügel, gut mit Krawatte, modisch-aktuell",
+        "longdescription": "Der zur Zeit sehr aktuelle Kentkragen ist formell und korrekt. Durch seine etwas breitere Kragenstellung wirkt er aber auch modern und dynamisch. Durch die etwas weiter auseinander stehenden Kragenecken gewinnt der Krawattenknoten mehr Gewicht als beim klassischen Londonkragen. Und Ihre Krawatte kommt besonders gut zur Geltung.",
+        "itemShapes": [],
+        "itemCategories": [],
+        "hasRecommendation": null,
+        "configurable": null,
+        "deactivated": null,
+        "itemReplacementoptionclassificationReplacementoptionId": 67
+      },
+      "passform": {
+        "id": 12,
+        "replacementoptionShapes": [
+          {
+            "identifier": "comfort",
+            "name": "Comfort Fit",
+            "replacementoptionArticles": [
+              {
+                "id": 13,
+                "identifier": "comfort",
+                "name": "Comfort Fit",
+                "price": null,
+                "bulkPrices": { "1": null },
+                "isDefault": true,
+                "unavailable": false,
+                "attributes": {
+                  "optionskuerzel": [
+                    {
+                      "identifier": "optionskuerzel",
+                      "value": "S1",
+                      "translatedvalue": "S1",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ]
+                },
+                "compatibilityInfo": []
+              }
+            ]
+          }
+        ],
+        "amountselectable": false,
+        "amount": 0,
+        "identifier": "comfort",
+        "name": "Comfort Fit",
+        "description": "klassisch, bequem weit, 2 Rückenfalten",
+        "longdescription": "Der klassische Walbusch-Hemdenschnitt ist angenehm weit. Mit leicht überschnittenen Schultern und bequemer Oberarmweite. Zwei Rückenfalten geben zusätzliche Bewegungsfreiheit.",
+        "itemShapes": [],
+        "itemCategories": [],
+        "hasRecommendation": null,
+        "configurable": null,
+        "deactivated": null,
+        "itemReplacementoptionclassificationReplacementoptionId": 63
+      },
+      "schnitt": {
+        "id": 14,
+        "replacementoptionShapes": [
+          {
+            "identifier": "langarm",
+            "name": "Langarm",
+            "replacementoptionArticles": [
+              {
+                "id": 15,
+                "identifier": "langarm",
+                "name": "Langarm",
+                "price": null,
+                "bulkPrices": { "1": null },
+                "isDefault": true,
+                "unavailable": false,
+                "attributes": [],
+                "compatibilityInfo": []
+              }
+            ]
+          }
+        ],
+        "amountselectable": false,
+        "amount": 0,
+        "identifier": "langarm",
+        "name": "Langarm",
+        "description": "",
+        "longdescription": "Alle Preise gelten für Maßhemden mit langem Arm. Komplettieren Sie Ihren Ärmel noch mit einer von drei Manschettenformen.",
+        "itemShapes": [],
+        "itemCategories": [],
+        "hasRecommendation": null,
+        "configurable": null,
+        "deactivated": null,
+        "itemReplacementoptionclassificationReplacementoptionId": 61
+      },
+      "knopfleiste": {
+        "id": 16,
+        "replacementoptionShapes": [
+          {
+            "identifier": "eingeschlagen",
+            "name": "eingeschlagen",
+            "replacementoptionArticles": [
+              {
+                "id": 17,
+                "identifier": "eingeschlagen",
+                "name": "eingeschlagen",
+                "price": null,
+                "bulkPrices": { "1": null },
+                "isDefault": true,
+                "unavailable": false,
+                "attributes": {
+                  "optionskuerzel": [
+                    {
+                      "identifier": "optionskuerzel",
+                      "value": "L1",
+                      "translatedvalue": "L1",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ]
+                },
+                "compatibilityInfo": []
+              }
+            ]
+          }
+        ],
+        "amountselectable": false,
+        "amount": 0,
+        "identifier": "eingeschlagen",
+        "name": "eingeschlagen",
+        "description": "keine Steppnähte, klassisch und schlicht, pflegeleicht",
+        "longdescription": "Knopfleiste eingeschlagen ohne Steppnähte. Wirkt klassisch, unauffällig und schlicht. Ideal für alle formellen Anlässe. Wir empfehlen diese Variante für unsere »Extraglatt« Stoffe, da sich hier keine Naht kräuselt.",
+        "itemShapes": [],
+        "itemCategories": [],
+        "hasRecommendation": null,
+        "configurable": null,
+        "deactivated": null,
+        "itemReplacementoptionclassificationReplacementoptionId": 14
+      },
+      "brusttasche": {
+        "id": 8,
+        "replacementoptionShapes": [
+          {
+            "identifier": "ohne_tasche",
+            "name": "Ohne Tasche",
+            "replacementoptionArticles": [
+              {
+                "id": 9,
+                "identifier": "ohne_tasche",
+                "name": "Ohne Tasche",
+                "price": null,
+                "bulkPrices": { "1": null },
+                "isDefault": true,
+                "unavailable": false,
+                "attributes": {
+                  "optionskuerzel": [
+                    {
+                      "identifier": "optionskuerzel",
+                      "value": "T3",
+                      "translatedvalue": "T3",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ]
+                },
+                "compatibilityInfo": []
+              }
+            ]
+          }
+        ],
+        "amountselectable": false,
+        "amount": 0,
+        "identifier": "ohne_tasche",
+        "name": "Ohne Tasche",
+        "description": "modisch-elegant, optimal für »Regular Fit«, oder Gesellschaftshemden",
+        "longdescription": "Die glatte Brustpartie ist zum einen modisch, insbesondere bei »Regular Fit« Hemden, zum anderen stilvoll bei eleganten Gesellschaftshemden.",
+        "itemShapes": [],
+        "itemCategories": [],
+        "hasRecommendation": null,
+        "configurable": null,
+        "deactivated": null,
+        "itemReplacementoptionclassificationReplacementoptionId": 9
+      },
+      "manschette": {
+        "id": 21,
+        "replacementoptionShapes": [
+          {
+            "identifier": "1_knopf",
+            "name": "1-Knopf",
+            "replacementoptionArticles": [
+              {
+                "id": 22,
+                "identifier": "1_knopf",
+                "name": "1-Knopf",
+                "price": null,
+                "bulkPrices": { "1": null },
+                "isDefault": true,
+                "unavailable": false,
+                "attributes": {
+                  "optionskuerzel": [
+                    {
+                      "identifier": "optionskuerzel",
+                      "value": "M2",
+                      "translatedvalue": "M2",
+                      "is_compatibilityattribute": false,
+                      "datatype": "String"
+                    }
+                  ]
+                },
+                "compatibilityInfo": []
+              }
+            ]
+          }
+        ],
+        "amountselectable": false,
+        "amount": 0,
+        "identifier": "1_knopf",
+        "name": "1-Knopf-Kombimanschette",
+        "description": "klassisch-elegant, auch für Manschettenknöpfe, abgerundete Ecken",
+        "longdescription": "Die Manschette ist mit abgerundeten Ecken und nur einen Knopf, aber zwei Knopflöchern ausgestattet. Die klassisch-elegante Anzugmanschette kann sowohl geknöpft als auch mit Manschettenknöpfen getragen werden.",
+        "itemShapes": [],
+        "itemCategories": [],
+        "hasRecommendation": null,
+        "configurable": null,
+        "deactivated": null,
+        "itemReplacementoptionclassificationReplacementoptionId": 20
+      },
+      "monogramm": {
+        "id": 46,
+        "replacementoptionShapes": [
+          {
+            "identifier": "kein_monogramm",
+            "name": "Kein Monogramm",
+            "replacementoptionArticles": [
+              {
+                "id": 47,
+                "identifier": "kein_monogramm",
+                "name": "Kein Monogramm",
+                "price": null,
+                "bulkPrices": { "1": null },
+                "isDefault": true,
+                "unavailable": false,
+                "attributes": [],
+                "compatibilityInfo": []
+              }
+            ]
+          }
+        ],
+        "amountselectable": false,
+        "amount": 0,
+        "identifier": "kein_monogramm",
+        "name": "Kein Monogramm",
+        "description": "Ihr Hemd wird ohne Monogramm gefertigt.",
+        "longdescription": "",
+        "itemShapes": [],
+        "itemCategories": [],
+        "hasRecommendation": null,
+        "configurable": null,
+        "deactivated": null,
+        "itemReplacementoptionclassificationReplacementoptionId": 40
+      }
+    },
+    "unavailableReplacementoptions": []
+  }
+  

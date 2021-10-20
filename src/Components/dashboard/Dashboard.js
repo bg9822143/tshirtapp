@@ -3,35 +3,32 @@ import { withStyles } from '@material-ui/styles';
 import CarouselSlider from '../carousel/Carousel';
 import Variant from '../variants/Variant';
 import ShopNow from '../shopnow/ShopNow';
-import { variantData } from '../GlobalData';
 import VariantCard from '../variantCard/VariantCard';
-import Footer from '../footer/Footer';
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
-const Dashboard = ({ classes }) => {
-    const [showVariants, setShowVariant] = useState(false);
-    const state = useSelector((state)=>state.reducer.id);
-    return (
-     
-           <div className={classes.dashboardParentContainer}> 
+import Box from '@material-ui/core/Box';
+import { selectVariantIndex } from '../../redux/selectors';
 
-            <div className={classes.dashboardSlider}>
+const Dashboard = ({ classes }) => {
+    const selectedVariantIndex = useSelector(selectVariantIndex);
+    return (
+        <Box className={classes.dashboardParentContainer}>
+            <Box className={classes.dashboardSlider}>
                 <CarouselSlider />
-            </div>
-            <div className={classes.shopNowContainer}>
+            </Box>
+            <Box className={classes.shopNowContainer}>
                 <ShopNow />
-            </div>
-            <div className={classes.variantsContainer}>
-                <Variant dataArray={variantData}/>
-            </div>
-            {(state !== -1) ?
+            </Box>
+            <Box className={classes.variantsContainer}>
+                <Variant />
+            </Box>
+            {(selectedVariantIndex !== -1) ?
                 <div className={classes.variantCatergory} >
-                    <VariantCard/>
+                    <VariantCard />
                 </div> : null
             }
-            <Footer />
-        
-         </div> 
+
+            {/* <Footer /> */}
+        </Box>
     );
 }
 

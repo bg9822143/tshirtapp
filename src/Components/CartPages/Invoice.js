@@ -26,13 +26,13 @@ const Invoice = ({ classes }) => {
                     <Typography variant='h6' sx={{ fontSize: '14px' }}>
                         BILLING ADDRESS
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
                         Ibrahim Alvi
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
                         Sindh
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
                         075471 Karachi
                     </Typography>
                     <MaterialLink href="#" className={classes.editLink}>
@@ -45,7 +45,7 @@ const Invoice = ({ classes }) => {
                         DELIVERY OPTIONS
 
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
                         like invoice address
                     </Typography>
                     <MaterialLink href="#" className={classes.editLink}>

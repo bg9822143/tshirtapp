@@ -13,11 +13,20 @@ const styles = {
     },
     // Shopping Page
     itemDetails: {
-        width: '45%'
+        width: '405px',
+        marginRight:'15px',
     },
     checkoutItem: {
-        width: '40%',
-        marginTop: '15px'
+        width: '280px',
+        marginTop: '30px',
+        marginLeft:'15px',
+    },
+    btnCheckOut:{
+        '& a':{
+            textDecoration:'none',
+            color:'white',
+            
+        }
     },
     itemImg: {
         width: '30%',
@@ -33,6 +42,11 @@ const styles = {
         '& a':{
             textDecoration:'none',
             color:'#fff'
+        }
+    },
+    orderCheckout:{
+        '& a':{
+            textDecoration:'none'
         }
     }
 }
