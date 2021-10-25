@@ -17,7 +17,7 @@ const Variant = ({ classes }) => {
       dispatch(setSelectedVariant(-1));
     });
     dispatch(getVariants());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Box
@@ -39,15 +39,16 @@ const Variant = ({ classes }) => {
         >
           <Box className={classes.variantPicture}>
             {activeIndex === i ? (
-              <img src={item.activeImg} />
+              <img src={item.activeImg} alt='' />
             ) : (
               <img
                 src={item.inactiveImg}
                 className={classes.variantimgActive}
+                alt=''
               />
             )}
           </Box>
-          <Box>{item.title}</Box>
+          <Box textAlign="center">{item.title}</Box>
         </Box>
       ))}
     </Box>

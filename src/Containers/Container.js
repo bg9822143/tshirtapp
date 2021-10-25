@@ -1,10 +1,11 @@
-import { withStyles } from '@material-ui/styles';
-import Navbar from '../Components/navbar/Navbar';
-import Footer from '../Components/footer/Footer';
 import Dashboard from '../Components/dashboard/Dashboard';
 import Measurement from '../Components/madetomeasure/Measurement';
 import CartPagesContainer from '../Components/CartPages/CartPagesContainer';
 import ThanksForShopping from '../Components/ThanksForShopping/ThanksForShopping';
+import Login from '../Components/pages/Login';
+import ForgetSome from '../Components/pages/ForgetSome';
+import ChangePassword from '../Components/pages/ChangePassword';
+import AdminDashboard from '../Components/pages/AdminDashboard';
 
 import Invoice from '../Components/CartPages/Invoice';
 import {
@@ -12,25 +13,26 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import { autocompleteClasses } from '@mui/material';
-import Box from '@material-ui/core/Box';
+import OrderDetail from "../Components/pages/OrderDetail";
 
 const Container = () => {
 
     return (
         <Router>
-            <Navbar />
             <Routes>
                 <Route path="/" element={<Dashboard />} />
-
                 <Route path="/thanksforshop" element={<ThanksForShopping />} />
-
                 <Route path="/varity" element={<Measurement />} />
                 <Route path='/varity/cart' element={<CartPagesContainer />} />
                 <Route path='/varity/cart/:type' element={<CartPagesContainer />} />
                 <Route path='/invoice' element={<Invoice />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/admin' element={<Login />} />
+                <Route path='/recoverypassword' element={<ForgetSome />} />
+                <Route path='/changepassword' element={<ChangePassword />} />
+                <Route path='/admin/dashboard' element={<AdminDashboard />} />
+                <Route path='/order/:orderid' element={<OrderDetail />} />
             </Routes>
-            <Footer />
         </Router>
     );
 }

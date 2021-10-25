@@ -144,14 +144,6 @@ const styles = {
         dashboardSlider: {
             marginTop: '120px',
         },
-        // shopNowContainer: {
-        //     left: 'auto',
-        //     right: 'auto',
-        //     width: '36%',
-        //     margin: '0 40%',
-
-
-        // },
     },
 }
 

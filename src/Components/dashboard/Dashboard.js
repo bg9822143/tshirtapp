@@ -7,11 +7,15 @@ import VariantCard from '../variantCard/VariantCard';
 import { useSelector } from 'react-redux';
 import Box from '@material-ui/core/Box';
 import { selectVariantIndex } from '../../redux/selectors';
+import Navbar from '../navbar/Navbar'
 
 const Dashboard = ({ classes }) => {
     const selectedVariantIndex = useSelector(selectVariantIndex);
     return (
+        <Box>
+            <Navbar />
         <Box className={classes.dashboardParentContainer}>
+            
             <Box className={classes.dashboardSlider}>
                 <CarouselSlider />
             </Box>
@@ -28,6 +32,7 @@ const Dashboard = ({ classes }) => {
             }
 
             {/* <Footer /> */}
+        </Box>
         </Box>
     );
 }

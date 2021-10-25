@@ -5,10 +5,6 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
-import TestImage from '../../assets/testImg.jpg';
-import TestImage1 from '../../assets/testImg1.png';
-import TestImage2 from '../../assets/testImg2.png';
-import TestImage3 from '../../assets/testImg3.png';
 import InfoIcon from '@mui/icons-material/Info';
 import Link from '@mui/material/Link';
 const style = {
@@ -65,7 +61,7 @@ export default function DetailsModal() {
                                 width: '100%',
                                 height: '100%'
                             }}>
-                                <img src={TestImage} />
+                                <img src="/assets/testImg.jpg" alt="" />
                             </Box>
                             <Box sx={{
                                 marginTop: '10px',
@@ -97,7 +93,7 @@ export default function DetailsModal() {
                                             display: 'flex',
                                             justifyContent: 'space-evenly'
                                         }}>
-                                            <img src={TestImage1} />
+                                            <img src="/assets/testImg1.jpg" alt="" />
                                         </Box>
                                         <Typography>
                                             125 g/qm
@@ -114,7 +110,7 @@ export default function DetailsModal() {
                                             display: 'flex',
                                             justifyContent: 'space-evenly'
                                         }}>
-                                            <img src={TestImage2} />
+                                            <img src="/assets/testImg2.jpg" alt="" />
                                         </Box>
                                         <Typography>
                                             100/2
@@ -131,7 +127,7 @@ export default function DetailsModal() {
                                             display: 'flex',
                                             justifyContent: 'space-evenly'
                                         }}>
-                                            <img src={TestImage3} />
+                                            <img src="/assets/testImg3.jpg" alt="" />
                                         </Box>
                                         <Typography>
                                             Leinwand

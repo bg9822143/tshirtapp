@@ -19,7 +19,7 @@ const MeasurementChoiceSelecion = ({ classes }) => {
                 </Typography>
             </Box>
             <Box className={classes.measurementImg}>
-                <img src="https://konfigurator.walbusch.de/images/9b47f37.png" />
+                <img src="https://konfigurator.walbusch.de/images/9b47f37.png" alt="" />
             </Box>
             <Box className={classes.measurementdescription}>
                 <Typography variant='h6'></Typography>

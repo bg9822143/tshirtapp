@@ -1,4 +1,4 @@
-import { fetchReplacementOptions, fetchVariants } from "../../api/apiUtils";
+import { fetchVariants } from "../../api/apiUtils";
 import { selectCurrentVariant } from "../selectors";
 import { updateConfigurator, updateVariants } from "./actions";
 

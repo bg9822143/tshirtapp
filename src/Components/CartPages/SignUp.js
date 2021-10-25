@@ -3,121 +3,198 @@ import { styles } from './CartPagesContainer.style';
 import { withStyles } from '@material-ui/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import CustomInput from "./CustomInput";
+import { useFormik } from "formik";
+import Checkbox from '@mui/material/Checkbox';
+import CustomButton from "./CustomButton";
+import { useDispatch, useSelector } from 'react-redux';
+import * as yup from "yup";
+import {useNavigate} from 'react-router-dom';
+import { userInfo } from '../../redux/actions';
 
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Button from '@material-ui/core/Button';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import { Link } from 'react-router-dom';
+const validationSchema = yup.object({
+    firstName: yup
+        .string()
+        .trim()
+        .max(25, "Must be 15 characters or less")
+        .matches(
+            /[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/,
+            "Name cannot contain numbers or special Characters"
+        )
+        .required("Required"),
+    lastName: yup
+        .string()
+        .max(20, "Must be 20 characters or less")
+        .trim()
+        .matches(
+            /[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/,
+            "Name cannot contain numbers or special Characters"
+        )
+        .required("Required"),
+    phoneNumber: yup
+        .string()
+        .max(11, "Must be less than 11 characters")
+        .trim()
+        .matches(
+            /([0-9]|[1-9][0-9])/,
+            "Invalid Number"
+        )
+        .required("Required"),
+    billingAddress: yup
+        .string("Enter your Billing Address")
+        .min(8, "Billing Address should be of minimum 8 characters length")
+        .matches(
+            /^[ A-Za-z0-9_@./#&+-]*$/,
+            "Name cannot contain numbers or special Characters"
+        )
+        .required("Billing Address is required"),
+    shippingAddress: yup
+        .string("Enter your Shipping Address")
+        .min(8, "Shipping Address should be of minimum 8 characters length")
+        .matches(
+            /^[ A-Za-z0-9_@./#&+-]*$/,
+            "Name cannot contain numbers or special Characters"
+        )
+        .required("Shipping Address is required"),
+
+});
 
 const SignUp = ({ classes }) => {
-    const [gender, setGender] = React.useState('');
-    const [country, setCountry] = React.useState('');
-    const handleChange = (event) => {
-        setGender(event.target.value);
+    const [sameAsBilling, setsameAsBilling] = React.useState(false);
+
+    const handleCheckChange = (event) => {
+        setsameAsBilling(event.target.checked);
     };
-    const handleCountryChange = (_event) => {
-        setCountry(_event.target.value);
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const formik = useFormik({
+        initialValues: {
+            firstName: "",
+            lastName: "",
+            phoneNumber: "",
+            billingAddress: "",
+            shippingAddress: "",
+        },
+        validationSchema: validationSchema,
+        onSubmit: (values, { resetForm }) => {
+            dispatch(userInfo(values));
+            navigate('/varity/cart/order')
+            resetForm();
+        },
+    });
+
+    
+    if (sameAsBilling) {
+        formik.values.shippingAddress = formik.values.billingAddress
     }
+    
+
+    const state = useSelector(state => state.reducer.userInfo)
+    console.log(state)
     return (
-        <Grid container spacing={5} sx={{ width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'space-evenly', }}>
-            <Grid xs={6} sx={{ paddingTop: '10px', backgroundColor: '#d3d9de' }}>
-                <Box>
-                    <FormControl sx={{ width: '95%', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <OutlinedInput placeholder="Please enter Email" sx={{ backgroundColor: '#fff', height: '35px', width: '100%', fontSize: '13px' }} />
-                    </FormControl>
-                </Box>
-                <Box>
-                    <FormControl size='medium' sx={{ width: '95%', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <InputLabel id="demo-simple-select-label" sx={{ backgroundColor: '#fff', height: '20px', fontSize: '13px' }}>Saluation</InputLabel>
-                        <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={gender}
-                            label="Saluation"
-                            onChange={handleChange}
-                            sx={{ backgroundColor: '#fff' }}
-                        >
-                            <MenuItem value='male' sx={{ fontSize: '14px' }}>Male</MenuItem>
-                            <MenuItem value='female' sx={{ fontSize: '14x' }}>Female</MenuItem>
-                        </Select>
-                    </FormControl>
-                </Box>
-                <Box>
-                    <FormControl sx={{ width: '95%', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <OutlinedInput placeholder="Please enter First Name" sx={{ backgroundColor: '#fff', height: '35px', width: '100%', fontSize: '13px' }} />
+        <Grid container spacing={5} sx={{ width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'space-evenly',flexWrap:'wrap',border:'1px solid red' }}>
+            <Grid xs={6} sx={{width:'500px', paddingTop: '10px', backgroundColor: '#d3d9de' ,border:'1px solid green'}}>
+                <form onSubmit={formik.handleSubmit}>
+                    <Box sx={{ textAlign: 'center', fontSize: '10px' }}>
+                        <CustomInput
+                            id="firstName"
+                            name="firstName"
+                            type="text"
+                            textlabel="First Name"
+                            onChange={formik.handleChange}
+                            value={formik.values.firstName}
+                            onBlur={formik.handleBlur}
+                            sx={{ fontFamily: 'initial' }}
+                            error={
+                                formik.touched.firstName && Boolean(formik.errors.firstName)
+                            }
+                            helperText={formik.touched.firstName && formik.errors.firstName}
+                        />
+                    </Box>
 
-                    </FormControl>
-                </Box>
-                <Box>
-                    <FormControl sx={{ width: '95%', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <OutlinedInput placeholder="Please enter Last Name" sx={{ backgroundColor: '#fff', height: '35px', width: '100%', fontSize: '13px' }} />
-
-                    </FormControl>
-                </Box>
-                <Box sx={{ display: 'flex' }}>
-                    <FormControl sx={{ width: '25ch', padding: '5px', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <OutlinedInput placeholder="PostalCode" sx={{ backgroundColor: '#fff', height: '35px', width: '100%', fontSize: '13px' }} />
-
-                    </FormControl>
-                    <FormControl sx={{ width: '40ch', padding: '5px', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <OutlinedInput placeholder="Location" sx={{ backgroundColor: '#fff', height: '35px', width: '100%', fontSize: '13px' }} />
-
-                    </FormControl>
-                </Box>
-                <Box sx={{ display: 'flex' }}>
-                    <FormControl sx={{ width: '35ch', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <OutlinedInput placeholder="State" sx={{ backgroundColor: '#fff', height: '35px', width: '100%', fontSize: '13px' }} />
-
-                    </FormControl>
-                    <FormControl sx={{ width: '25ch', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <OutlinedInput placeholder="Enter Number" sx={{ backgroundColor: '#fff', height: '35px', width: '100%', fontSize: '13px' }} />
-
-                    </FormControl>
-                </Box>
-                <Box sx={{ display: 'flex' }}>
-                    <FormControl sx={{ width: '40ch', paddingTop: '5px', paddingBottom: '5px', paddingRight: '8px', paddingLeft: '8px' }}>
-                        <OutlinedInput placeholder="Please enter Address" sx={{ backgroundColor: '#fff', height: '35px', width: '100%', fontSize: '13px' }} />
-
-                    </FormControl>
-                </Box>
-                <Box sx={{ display: 'flex' }}>
-                    <FormControl fullWidth sx={{ padding: '5px', width: '40ch' }}>
-                        <InputLabel id="demo-simple-select-label" sx={{ backgroundColor: '#fff', height: '35px', }}>Country</InputLabel>
-                        <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={country}
-                            label="Saluation"
-                            onChange={handleCountryChange}
-                            sx={{ backgroundColor: '#fff', fontSize: '12px' }}
-                        >
-                            <MenuItem value='male' sx={{ fontSize: '14px' }}>Pakistan</MenuItem>
-                            <MenuItem value='female' sx={{ fontSize: '14px' }}>Ireland</MenuItem>
-                        </Select>
-                    </FormControl>
-                </Box>
-                <Box sx={{ display: 'flex', margin: '10px auto', width: '100%', textAlign: 'center', padding: '15px auto' }}>
-
-
-                    <Button variant="contained" size="large" color='primary' fullWidth={true} sx={{ borderRadius: 'none', margin: '10px auto', }} className={classes.btn}>
-                        <Link to='/varity/cart/order'>       CheckOut   </Link>
-                    </Button>
-
-                </Box>
+                    <Box sx={{ textAlign: 'center' }}>
+                        <CustomInput
+                            id="lastName"
+                            name="lastName"
+                            type="text"
+                            textlabel="Last Name"
+                            sx={{ fontFamily: 'initial' }}
+                            onChange={formik.handleChange}
+                            value={formik.values.lastName}
+                            onBlur={formik.handleBlur}
+                            error={formik.touched.lastName && Boolean(formik.errors.lastName)}
+                            helperText={formik.touched.lastName && formik.errors.lastName}
+                        />
+                    </Box>
+                    <Box sx={{ textAlign: 'center' }}>
+                        <CustomInput
+                            id="phoneNumber"
+                            name="phoneNumber"
+                            type="text"
+                            textlabel="Phone Number"
+                            onChange={formik.handleChange}
+                            value={formik.values.phoneNumber}
+                            sx={{ fontFamily: 'initial' }}
+                            onBlur={formik.handleBlur}
+                            error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
+                            helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
+                        />
+                    </Box>
+                    <Box sx={{ textAlign: 'center' }}>
+                        <CustomInput
+                            id="billingAddress"
+                            name="billingAddress"
+                            type="text"
+                            textlabel="Billing Address"
+                            sx={{ fontFamily: 'initial' }}
+                            onChange={formik.handleChange}
+                            value={formik.values.billingAddress}
+                            onBlur={formik.handleBlur}
+                            error={formik.touched.billingAddress && Boolean(formik.errors.billingAddress)}
+                            helperText={formik.touched.billingAddress && formik.errors.billingAddress}
+                        />
+                    </Box>
+                    <Box sx={{ width: '80%', margin: '0 auto -12px auto', fontSize: '14px' }}>
+                        <FormControlLabel
+                            label={<Typography variant="body2" color="textSecondary" sx={{ fontSize: '12px' }}>Same as Billing Address</Typography>}
+                            control={
+                                <Checkbox
+                                    onChange={handleCheckChange}
+                                    size='small'
+                                />
+                            }
+                        />
+                    </Box>
+                    <Box sx={{ textAlign: 'center' }}>
+                        <CustomInput
+                            id="shippingAddress"
+                            name="shippingAddress"
+                            type="text"
+                            disabled={sameAsBilling}
+                            textlabel="Shipping Address"
+                            onChange={formik.handleChange}
+                            value={formik.values.shippingAddress}
+                            sx={{ fontFamily: 'initial' }}
+                            onBlur={formik.handleBlur}
+                            error={formik.touched.shippingAddress && Boolean(formik.errors.shippingAddress)}
+                            helperText={formik.touched.shippingAddress && formik.errors.shippingAddress}
+                        />
+                    </Box>
+                    <Box sx={{ display: 'flex', margin: '10px auto', width: '100%', textAlign: 'center', padding: '15px auto', justifyContent: 'center' }}>
+                     <CustomButton onSubmit={formik.onSubmit} onClick={()=>dispatch(userInfo(formik.values))} />
+                    </Box>
+                </form>
             </Grid>
-            <Grid xs={6}>
+            <Grid xs={6} sx={{border:'1px solid pink',width:'500px'}}>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', marginLeft: '10%' }}>
                     <Box className={classes.itemImg}>
-                        <img src='https://konfigurator.walbusch.de/savedconfigurations/XR026A_s.png' width='100%' />
+                        <img src='https://konfigurator.walbusch.de/savedconfigurations/XR026A_s.png' width='100%' alt="" />
                     </Box>
                     <Box>
                         <Typography variant='h6' sx={{ fontSize: '16px', fontWeight: 'bold' }}>
@@ -157,7 +234,7 @@ const SignUp = ({ classes }) => {
                             </Typography>
                         </Grid>
                         <Grid xs={4}>
-                            <Typography variant='p' sx={{ fontSize: '14px' }}>
+                            <Typography variant='p' sx={{ fontSize: '16px' }}>
                                 € 110.00
                             </Typography>
                         </Grid>
@@ -168,24 +245,24 @@ const SignUp = ({ classes }) => {
                     <Box container sx={{ width: '98%', marginTop: '10px', marginLeft: '12px', }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                             <Box sx={{ width: '25%' }}>
-                                <Typography variant='p' sx={{ fontSize: '14px', textAlign: 'left' }}>
+                                <Typography variant='p' sx={{ fontSize: '16px', textAlign: 'left' }}>
                                     Shipping
                                 </Typography>
                             </Box>
                             <Box sx={{ width: '25%' }}>
-                                <Typography variant='p' sx={{ fontSize: '14px', paddingLeft: '15%' }}>
+                                <Typography variant='p' sx={{ fontSize: '16px', paddingLeft: '15%' }}>
                                     € 110.00
                                 </Typography>
                             </Box>
                         </Box>
                         <Box xs={6} sx={{ display: 'flex', justifyContent: 'space-between' }}>
                             <Box sx={{ width: '20%' }}>
-                                <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                <Typography variant='p' sx={{ fontSize: '16px' }}>
                                     Total
                                 </Typography>
                             </Box>
                             <Box sx={{ width: '20%' }}>
-                                <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                <Typography variant='p' sx={{ fontSize: '16px' }}>
                                     € 110.00
                                 </Typography>
                             </Box>

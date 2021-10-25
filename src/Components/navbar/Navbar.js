@@ -20,7 +20,8 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
     const classes = useStyles();
-    const [totalCart, setTotalCart] = useState(5);
+    //todo utilize setTotalCart or remove it as state
+    const [totalCart] = useState(5);
 
     return (
         <Box
@@ -35,7 +36,7 @@ const Navbar = () => {
         >
             <Box>
                 <Link to="/">
-                    <img src="logo.png" width="200px" height="auto" />
+                    <img src="/logo.png" width="200px" height="auto" alt="" />
                 </Link>
             </Box>
             <Box>

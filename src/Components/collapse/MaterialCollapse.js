@@ -9,11 +9,7 @@ import { Typography } from '@mui/material';
 import { Box } from '@mui/material';
 import { withStyles } from '@material-ui/styles';
 import { styles } from './MaterialCollapse.style';
-import Design1 from '../../assets/designImg1.png';
-import Design2 from '../../assets/designImg2.png';
-import Design3 from '../../assets/designImg3.png';
-import Design4 from '../../assets/designImg4.png';
-import { __PRIVATE__ } from 'styled-components';
+
 function MaterialCollapse() {
   const [open, setOpen] = React.useState(true);
   const handleClick = (_ev) => {
@@ -186,7 +182,7 @@ function MaterialCollapse() {
                   textAlign: 'left',
                   marginLeft: '5px',
                 }}>
-                  <img src={Design1} width='100%' height="100%" />
+                  <img src="/assets/designImg1.png" width='100%' height="100%" alt="" />
                 </Box>
                 <Box sx={{
                   width: '5%',
@@ -195,7 +191,7 @@ function MaterialCollapse() {
                   textAlign: 'left',
                   marginLeft: '5px',
                 }}>
-                  <img src={Design2} width='100%' height="100%" />
+                  <img src="/assets/designImg2.png" width='100%' height="100%" alt="" />
                 </Box>
                 <Box sx={{
                   width: '5%',
@@ -204,7 +200,7 @@ function MaterialCollapse() {
                   textAlign: 'left',
                   marginLeft: '5px',
                 }}>
-                  <img src={Design3} width='100%' height="100%" />
+                  <img src="/assets/designImg3.png" width='100%' height="100%" alt="" />
                 </Box>
                 <Box sx={{
                   width: '5%',
@@ -213,7 +209,7 @@ function MaterialCollapse() {
                   textAlign: 'left',
                   marginLeft: '5px',
                 }}>
-                  <img src={Design4} width='100%' height="100%" />
+                  <img src="/assets/designImg4.png" width='100%' height="100%" alt="" />
                 </Box>
               </Box>
             </Box>

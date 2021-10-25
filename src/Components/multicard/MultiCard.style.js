@@ -10,10 +10,6 @@ const styles = {
         backgroundColor:'#e7eaf0'
     },
     multiDetails:{
-<<<<<<< HEAD
-        fontFamily: 'Titillium Web sans-serif',
-=======
->>>>>>> e71bc471a7078ce4a62f45c11807df76536fc5fe
         fontSize:'22px',
         cursor:'pointer',
         display:'flex',

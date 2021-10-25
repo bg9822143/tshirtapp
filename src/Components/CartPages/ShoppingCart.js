@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { styles } from './CartPagesContainer.style';
 import { withStyles } from '@material-ui/styles';
 import Box from '@mui/material/Box';
@@ -22,41 +22,58 @@ const ShoppingCart = ({ classes }) => {
     const handleCountryChange = (_event) => {
         setCountry(_event.target.value);
     }
-    return (
-        <Grid container spacing={3} sx={{ width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
-            <Grid className={classes.itemDetails}>
+    const shirtData = [
+        {
+            color: 'Uni red',
+            shirtType: ' Shirt poplin',
+            sizeSpecify: 'Comfort Fit',
+            catergory: 'Kent',
+            placket: 'Button placket: tucked in',
+            article: 'Article no. XR026A',
+            shippingBill: '5.95',
+            subTotal: '110.00',
+            total: '112.95'
+        }
+    ]
+    return (  
+        <Grid container spacing={3} sx={{ width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'space-between' ,flexWrap:'wrap'}}>
+      
+             
+         
+                 <Grid className={classes.itemDetails}>
+               
                 <Typography variant='h6' sx={{ fontSize: '16px', textAlign: 'left' }}>1.On what basis u r born </Typography>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', textAlign: 'left', width: '405px', marginRight: '105px' }}>
+                {shirtData.map((details)=>{return <Box sx={{ display: 'flex', flexWrap: 'wrap', textAlign: 'left', width: '405px', marginRight: '105px' }}>
                     <Box className={classes.itemImg}>
-                        <img src='https://konfigurator.walbusch.de/savedconfigurations/XR026A_s.png' width='100%' />
+                        <img src='https://konfigurator.walbusch.de/savedconfigurations/XR026A_s.png' width='100%' alt="" />
                     </Box>
                     <Box sx={{ paddingLeft: '0%' }}>
                         <Typography variant='h6' sx={{ fontSize: '16px', fontWeight: 'bold', paddingLeft: '7.5%' }}>
                             Made-to-measure shirt
                         </Typography>
 
-                        <List sx={{ width: '95%', maxWidth: 360, fontSize: '14px', lineHeight: '0.7px', textAlgin: 'left' }} >
+                        <List sx={{ width: '96%', maxWidth: 360, fontSize: '14px', lineHeight: '0.7px', textAlgin: 'left' }} >
                             <ListItem sx={{ textAlign: 'left' }}>
-                                Uni red
+                                {details.color}
                             </ListItem>
                             <ListItem>
-                                Shirt poplin
+                                {details.shirtType}
 
                             </ListItem>
                             <ListItem>
-                                Comfort Fit
+                                {details.sizeSpecify}
 
                             </ListItem>
                             <ListItem>
-                                Kent
+                                {details.catergory}
+
+                            </ListItem>
+                            <ListItem sx={{letterSpacing:'2px'}}>
+                                {details.placket}
 
                             </ListItem>
                             <ListItem>
-                                Button placket: tucked in
-
-                            </ListItem>
-                            <ListItem>
-                                Article no. XR026A
+                                {details.article}
                             </ListItem>
 
                         </List>
@@ -85,50 +102,52 @@ const ShoppingCart = ({ classes }) => {
                             </Grid>
                             <Grid xs={4}>
                                 <Typography variant='p' sx={{ fontSize: '14px' }}>
-                                    € 110.00
+                                    € {details.total}
                                 </Typography>
                             </Grid>
 
                         </Grid>
                     </Box>
-                </Box>
+                </Box>})}
             </Grid>
             <Grid className={classes.checkoutItem}>
+           
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', }}>
                     <TextField id="outlined-basic" label="Enter voucher" variant="outlined" /><Typography variant='p' sx={{ color: 'grey', marginLeft: '10%', fontSize: '13px' }}>Redeem</Typography>
                 </Box>
                 <Box sx={{ marginTop: '20px' }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                {shirtData.map((details)=>{   return <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <Typography variant='p' sx={{ fontSize: '14px' }}>
                             Shipping
                         </Typography>
                         <Typography variant='p'>
-                            € 5.95
+                            € {details.shippingBill}
                         </Typography>
 
-                    </Box>
+                    </Box> })}   
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px', marginBottom: '10px' }}>
                         <Typography variant='p' sx={{ fontSize: '14px', fontWeight: 'bold' }}>
                             Total
                         </Typography>
-                        <Typography variant='p' sx={{ fontWeight: 'bold' }}>
-                            € 112.95
-                        </Typography>
-
-                    </Box>
+                        {shirtData.map((details)=>{  return    <Typography variant='p' sx={{ fontWeight: 'bold' }}>
+                            € {details.total}
+                        </Typography>})}   
+                
+                    </Box>   
                     <Button variant="contained" size="large" color='primary' fullWidth={true} sx={{ borderRadius: 'none' }} className={classes.btnCheckOut}>
 
                     <Link to='/varity/cart/signup' sx={{textDecoratiion:'none'}}>
-
                             CheckOut
                     </Link>
                     </Button>
 
-                </Box>
+                </Box> 
                 <Box>
 
                 </Box>
+          
             </Grid>
+           
         </Grid>
     )
 }

@@ -9,6 +9,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 import VariantSubCard from './VariantSubCard';
 import { useDispatch } from 'react-redux';
 import { setSelectedVariant } from '../../redux/actions/actions';
+
 export default function VariantCard(props) {
     const dispatch = useDispatch();
     return (
