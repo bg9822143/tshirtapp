@@ -1,5 +1,4 @@
-const port = 9000;
-const base = `http://localhost:${port}`;
+const base = `https://ceapi.hemdennachmass.com`;
 
 export const fetchVariants = () =>
   fetch(`${base}/variants`)
