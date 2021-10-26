@@ -1,46 +1,58 @@
-import React, { useEffect } from 'react';
-import { withStyles } from '@material-ui/styles';
-import { styles } from './Variant.style';
-import { useDispatch, useSelector } from 'react-redux';
-import { setVariantData } from '../../actions/action';
-import { setID } from '../../actions/action';
-const Variant = ({ classes, ...props }) => {
-    const dispatch = useDispatch();
-    const activeIndex = useSelector(state => state.reducer.id);
-    console.log(activeIndex)
-    const getVariantData = async (id) => {
-        const myRequest = new Request('https://ceapi.hemdennachmass.com/variants', {
-            method: 'GET',
-            headers: { id },
-            mode: 'cors',
-            cache: 'default',
-        });
-        await fetch(myRequest).then(res => res.json()).then(data => dispatch(setVariantData(data))).catch(err => console.log(err));
-    }
+import React, { useEffect } from "react";
+import { withStyles } from "@material-ui/styles";
+import { styles } from "./Variant.style";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedVariant } from "../../redux/actions/actions";
+import Box from "@material-ui/core/Box";
+import { selectVariantIndex, selectVariants } from "../../redux/selectors";
+import { getVariants } from "../../redux/actions/thunkActions";
 
-    useEffect(() => {
-        document.addEventListener('click', (_ev) => {
-            dispatch(setID(-1))
-        });
-    }, [])
+const Variant = ({ classes }) => {
+  const dispatch = useDispatch();
+  const variants = useSelector(selectVariants);
+  const activeIndex = useSelector(selectVariantIndex);
 
-    return (
-        <div className={classes.variant}>
-            {props.dataArray.map((item, ind) => <div key={ind}
-                onClick={(ev) => {
-                    getVariantData(item.id);
-                    dispatch(setID(ind));
-                    ev.stopPropagation();
-                }}>
-                <div className={classes.variantPicture} >
-                    {(activeIndex === ind) ? <img src={item.activeImgSrc} /> : <img src={item.imgSrc} className={classes.variantimgActive} />}
-                </div>
-                <div className={classes.variantText}>{item.title}</div>
-            </div>
+  useEffect(() => {
+    document.addEventListener("click", (_ev) => {
+      dispatch(setSelectedVariant(-1));
+    });
+    dispatch(getVariants());
+  }, [dispatch]);
+
+  return (
+    <Box
+      display="flex"
+      displayContent="row"
+      flexWrap="wrap"
+      justifyContent="space-evenly"
+      width="100%"
+    >
+      {variants.map((item, i) => (
+        <Box
+          key={i}
+          onClick={(ev) => {
+            // getVariantData(item.id);
+            dispatch(setSelectedVariant(i));
+            ev.stopPropagation();
+          }}
+          sx={{ marginBottom: "8px" }}
+        >
+          <Box className={classes.variantPicture}>
+            {activeIndex === i ? (
+              <img src={item.activeImg} alt='' />
+            ) : (
+              <img
+                src={item.inactiveImg}
+                className={classes.variantimgActive}
+                alt=''
+              />
             )}
-        </div>
-    )
-}
-
+          </Box>
+          <Box textAlign="center">{item.title}</Box>
+        </Box>
+      ))}
+    </Box>
+  );
+};
 
 export default withStyles(styles)(Variant);
