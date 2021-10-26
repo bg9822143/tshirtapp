@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/tshirtapp/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/tshirtapp/static/js/main.e7e7d36e.chunk.js",
-    "main.js.map": "/tshirtapp/static/js/main.e7e7d36e.chunk.js.map",
-    "runtime-main.js": "/tshirtapp/static/js/runtime-main.32dd1267.js",
-    "runtime-main.js.map": "/tshirtapp/static/js/runtime-main.32dd1267.js.map",
-    "static/js/2.8394f8d3.chunk.js": "/tshirtapp/static/js/2.8394f8d3.chunk.js",
-    "static/js/2.8394f8d3.chunk.js.map": "/tshirtapp/static/js/2.8394f8d3.chunk.js.map",
-    "static/js/3.67047c09.chunk.js": "/tshirtapp/static/js/3.67047c09.chunk.js",
-    "static/js/3.67047c09.chunk.js.map": "/tshirtapp/static/js/3.67047c09.chunk.js.map",
+    "main.css": "/tshirtapp/static/css/main.a617e044.chunk.css",
+    "main.js": "/tshirtapp/static/js/main.b2be32f6.chunk.js",
+    "main.js.map": "/tshirtapp/static/js/main.b2be32f6.chunk.js.map",
+    "runtime-main.js": "/tshirtapp/static/js/runtime-main.29f64a4a.js",
+    "runtime-main.js.map": "/tshirtapp/static/js/runtime-main.29f64a4a.js.map",
+    "static/js/2.fdbd8911.chunk.js": "/tshirtapp/static/js/2.fdbd8911.chunk.js",
+    "static/js/2.fdbd8911.chunk.js.map": "/tshirtapp/static/js/2.fdbd8911.chunk.js.map",
+    "static/js/3.2e7fb9c3.chunk.js": "/tshirtapp/static/js/3.2e7fb9c3.chunk.js",
+    "static/js/3.2e7fb9c3.chunk.js.map": "/tshirtapp/static/js/3.2e7fb9c3.chunk.js.map",
     "index.html": "/tshirtapp/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/tshirtapp/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.8394f8d3.chunk.js.LICENSE.txt": "/tshirtapp/static/js/2.8394f8d3.chunk.js.LICENSE.txt"
+    "static/css/main.a617e044.chunk.css.map": "/tshirtapp/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.fdbd8911.chunk.js.LICENSE.txt": "/tshirtapp/static/js/2.fdbd8911.chunk.js.LICENSE.txt",
+    "static/media/Shirt.31f7c3c3.png": "/tshirtapp/static/media/Shirt.31f7c3c3.png",
+    "static/media/testImg.8c1f242f.jpg": "/tshirtapp/static/media/testImg.8c1f242f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.32dd1267.js",
-    "static/js/2.8394f8d3.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.e7e7d36e.chunk.js"
+    "static/js/runtime-main.29f64a4a.js",
+    "static/js/2.fdbd8911.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.b2be32f6.chunk.js"
   ]
 }
