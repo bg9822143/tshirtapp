@@ -19,16 +19,16 @@ const BuyNow = ({ classes }) => {
         <Grid container spacing={2} sx={{ width: '70%', margin: '0 auto', display: 'flex', justifyContent: 'space-evenly' }}>
             <Grid xs={6}>
                 <Box sx={{ textAlign: 'left' }}>
-                    <Typography variant='h6' sx={{ fontSize: '16px' }}>
+                    <Typography variant='h6' sx={{ fontSize: '14px' }}>
                         BILLING ADDRESS
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
                         Ibrahim Alvi
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
                         Sindh
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
                         075471 Karachi
                     </Typography>
                     <Link href="#" className={classes.editLink}>
@@ -37,11 +37,11 @@ const BuyNow = ({ classes }) => {
 
                 </Box>
                 <Box sx={{ textAlign: 'left' }}>
-                    <Typography variant='h6' sx={{ fontSize: '16px' }}>
+                    <Typography variant='h6' sx={{ fontSize: '14px' }}>
                         DELIVERY OPTIONS
 
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
                         like invoice address
                     </Typography>
                     <Link href="#" className={classes.editLink}>
@@ -50,10 +50,10 @@ const BuyNow = ({ classes }) => {
 
                 </Box>
                 <Box sx={{ textAlign: 'left' }}>
-                    <Typography variant='h6' sx={{ fontSize: '16px' }}>
+                    <Typography variant='h6' sx={{ fontSize: '14px' }}>
                         PAYMENT OPTIONS
                     </Typography>
-                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
+                    <Typography variant='h6' sx={{ fontSize: '12px', fontWeight: 'light' }}>
                         On Bill
                     </Typography>
                     <Link href="#" className={classes.editLink}>
@@ -68,10 +68,10 @@ const BuyNow = ({ classes }) => {
                         <img src='https://konfigurator.walbusch.de/savedconfigurations/XR026A_s.png' width='100%' />
                     </Box>
                     <Box >
-                        <Typography variant='h6' sx={{ fontSize: '16px', fontWeight: 'bold' }}>
+                        <Typography variant='h6' sx={{ fontSize: '13px', fontWeight: 'bold' }}>
                             1x made-to-measure shirt
                         </Typography>
-                        <List sx={{ width: '100%', maxWidth: 360, fontSize: '14px', lineHeight: '0.7px' }}>
+                        <List sx={{ width: '100%', maxWidth: 360, fontSize: '12px', lineHeight: '0.7px' }}>
                             <ListItem>
                                 Uni red
                             </ListItem>
@@ -98,12 +98,12 @@ const BuyNow = ({ classes }) => {
                         </List>
                         <Grid container spacing={3} sx={{ margin: '10px', display: 'flex', alignItems: 'center' }}>
                             <Grid xs={8}>
-                                <Typography variant='p' sx={{ fontSize: '14px', display: 'flex' }}>
+                                <Typography variant='p' sx={{ fontSize: '11px', display: 'flex' }}>
                                     <Brightness1Icon fontSize='small' color='success' />   Delivery in 3-4 weeks
                                 </Typography>
                             </Grid>
                             <Grid xs={4}>
-                                <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                <Typography variant='p' sx={{ fontSize: '11px' }}>
                                     € 110.00
                                 </Typography>
                             </Grid>
@@ -118,24 +118,24 @@ const BuyNow = ({ classes }) => {
                         <Box container sx={{ width: '90%', marginTop: '10px', marginLeft: '12px' }}>
                             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <Box sx={{ width: '45%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '11px' }}>
                                         Shipping
                                     </Typography>
                                 </Box>
                                 <Box sx={{ width: '45%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '11px' }}>
                                         € 110.00
                                     </Typography>
                                 </Box>
                             </Box>
                             <Box xs={6} sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <Box sx={{ width: '45%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '11px' }}>
                                         Total
                                     </Typography>
                                 </Box>
                                 <Box sx={{ width: '45%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '11px' }}>
                                         € 110.00
                                     </Typography>
                                 </Box>

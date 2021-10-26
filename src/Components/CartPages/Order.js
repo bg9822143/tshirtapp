@@ -9,140 +9,124 @@ import ListItem from '@mui/material/ListItem';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import MaterialLink from '@mui/material/Link'
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import { Link } from 'react-router-dom'
 const Order = ({ classes }) => {
-    const data = useSelector(state => state.reducer.userInfo);
-    const shirtData = [
-        {
-            color: 'Uni red',
-            shirtType: ' Shirt poplin',
-            sizeSpecify: 'Comfort Fit',
-            catergory: 'Kent',
-            placket: 'Button placket: tucked in',
-            article: 'Article no. XR026A',
-            shippingBill: '5.95',
-            subTotal: '110.00',
-            total: '114.95'
-        }
-    ]
+    debugger;
     return (
-        <Grid container spacing={2} sx={{ width: '95%', margin: '0 auto', display: 'flex', justifyContent: 'space-evenly', }}>
+        <Grid container spacing={2} sx={{ width: '95%', margin: '0 auto', display: 'flex', justifyContent: 'space-evenly',border:'1px solid red'}}>
             <Grid xs={6}>
-                <Box sx={{ textAlign: 'left', }}>
+                <Box sx={{ textAlign: 'left',border:'1px solid black' }}>
                     <Typography variant='h6' sx={{ fontSize: '16px' }}>
                         BILLING ADDRESS
                     </Typography>
-                    {data.map((item, ind) => {
-                        return (<Box><Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
-                            {item._userInfo.firstName}
-                        </Typography>
-                            <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
-                                {item._userInfo.lastName}
-                            </Typography>
-                            <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
-                                {item._userInfo.phoneNumber}
-                            </Typography>
-                            <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
-                                {item._userInfo.billingAddress}
-                            </Typography>
-                            <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
-                                {item._userInfo.shippingAddress}
-                            </Typography>
-                        </Box>
-                        )
-                    })}
-
+                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
+                        Ibrahim Alvisss
+                    </Typography>
+                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
+                        Sindh
+                    </Typography>
+                    <Typography variant='h6' sx={{ fontSize: '14px', fontWeight: 'light' }}>
+                        075471 Karachi
+                    </Typography>
                     <MaterialLink href="#" className={classes.editLink}>
                         edit
                     </MaterialLink>
 
                 </Box>
-                <Grid xs={12} sx={{ paddingTop: '10px', width: '100%' }}>
-                    <Button fullWidth={true} variant="contained" size="large" color='primary' className={classes.orderCheckout}>
-                        <Link to='/invoice'>     CheckOut   </Link>
-                    </Button>
+                <Grid xs={12} sx={{ paddingTop: '10px', backgroundColor: '#d3d9de', width: '100%' }}>
+                    <FormControl component="fieldset" sx={{border:'1px solid black' }}>
 
+                        <RadioGroup
+                            aria-label="gender"
+                            defaultValue="Billing Address"
+                            name="radio-buttons-group"
+                        >
+                            <FormControlLabel value="Billing Address" control={<Radio />} label="Billing Address" />
+                            <FormControlLabel value="Different Shipping Address" control={<Radio />} label="Different Shipping Address" />
+
+                        </RadioGroup>
+                    </FormControl>
+                    
+                        <Button fullWidth={true} variant="contained" size="large" color='primary' >
+                        <Link to='/invoice'>     CheckOut   </Link>
+                        </Button>
+                 
                 </Grid>
             </Grid>
             <Grid xs={6}>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', }}>
                     <Box className={classes.itemImg}>
-                        <img src='https://konfigurator.walbusch.de/savedconfigurations/XR026A_s.png' width='100%' alt="" />
+                        <img src='https://konfigurator.walbusch.de/savedconfigurations/XR026A_s.png' width='100%' />
                     </Box>
                     <Box>
-
-
                         <Typography variant='h6' sx={{ fontSize: '16px', fontWeight: 'bold' }}>
                             1x made-to-measure shirt
                         </Typography>
-                        {shirtData.map((details) => {
-                            return <List sx={{ width: '100%', maxWidth: 360, fontSize: '14px', lineHeight: '0.7px' }}>
-                                <ListItem>
-                                    {details.color}
-                                </ListItem>
-                                <ListItem>
-                                    {details.shirtType}
+                        <List sx={{ width: '100%', maxWidth: 360, fontSize: '14px', lineHeight: '0.7px' }}>
+                            <ListItem>
+                                Uni red
+                            </ListItem>
+                            <ListItem>
+                                Shirt poplin
 
-                                </ListItem>
-                                <ListItem>
-                                    {details.sizeSpecify}
+                            </ListItem>
+                            <ListItem>
+                                Comfort Fit
 
-                                </ListItem>
-                                <ListItem>
-                                    {details.catergory}
+                            </ListItem>
+                            <ListItem>
+                                Kent
 
-                                </ListItem>
-                                <ListItem>
-                                    {details.placket}
+                            </ListItem>
+                            <ListItem>
+                                Button placket: tucked in
 
-                                </ListItem>
-                                <ListItem>
-                                    {details.article}
-                                </ListItem>
+                            </ListItem>
+                            <ListItem>
+                                Article no.XR026A
+                            </ListItem>
 
-                            </List>
-                        })}
-                        <Grid container spacing={4} sx={{ margin: '10px', display: 'flex', alignItems: 'center', }}>
+                        </List>
+                        <Grid container spacing={4} sx={{ margin: '10px', display: 'flex', alignItems: 'center',border:'1px solid black' }}>
                             <Grid xs={8}>
-                                <Typography variant='p' sx={{ fontSize: '14px', display: 'flex' }}>
+                                <Typography variant='p' sx={{ fontSize: '13px', display: 'flex' }}>
                                     <Brightness1Icon fontSize='small' color='success' />   Delivery in 3-4 weeks
                                 </Typography>
                             </Grid>
                             <Grid xs={4}>
-                                <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                <Typography variant='p' sx={{ fontSize: '13px' }}>
                                     € 110.00
                                 </Typography>
                             </Grid>
                         </Grid>
-                        <Box container sx={{ width: '110%', marginTop: '10px', marginLeft: '12px' }}>
+                        <Box container sx={{ width: '110%', borderTop: '3px solid silver', marginTop: '10px', marginLeft: '12px' }}>
                             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <Box sx={{ width: '20%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '13px' }}>
                                         Shipping
                                     </Typography>
                                 </Box>
                                 <Box sx={{ width: '28%' }}>
-                                    {shirtData.map((details) => {
-                                        return <Typography variant='p' sx={{ fontSize: '14px' }}>
-                                            € {details.subTotal}
-                                        </Typography>
-                                    })}
+                                    <Typography variant='p' sx={{ fontSize: '13px' }}>
+                                        € 110.00
+                                    </Typography>
                                 </Box>
                             </Box>
                             <Box xs={6} sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <Box sx={{ width: '20%' }}>
-                                    <Typography variant='p' sx={{ fontSize: '14px' }}>
+                                    <Typography variant='p' sx={{ fontSize: '13px' }}>
                                         Total
                                     </Typography>
                                 </Box>
                                 <Box sx={{ width: '28%' }}>
-                                    {shirtData.map((details) => {
-                                        return <Typography variant='p' sx={{ fontSize: '14px' }}>
-                                            € {details.total}
-                                        </Typography>
-                                    })}
+                                    <Typography variant='p' sx={{ fontSize: '13px' }}>
+                                        € 110.00
+                                    </Typography>
                                 </Box>
                             </Box>
 

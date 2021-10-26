@@ -13,47 +13,28 @@ const styles = {
     },
     // Shopping Page
     itemDetails: {
-        width: '50%',
-        marginRight: '15px',
-        marginBottom:'10px'
+        width: '45%'
     },
     checkoutItem: {
-        width: '45%',
-        marginLeft: '15px',
-    },
-    btnCheckOut: {
-        '& a': {
-            textDecoration: 'none',
-            color: 'white',
-
-        }
+        width: '40%',
+        marginTop: '15px'
     },
     itemImg: {
         width: '30%',
         height: '90px',
-        textAlign: 'left'
+        textAlign:'left'
     },
     editLink: {
         textAlign: 'left',
         textDecoratiion: 'none',
-        color: 'black'
+        color:'black'
     },
-    btn: {
-        '& a': {
-            textDecoration: 'none',
-            color: '#fff'
+    btn:{
+        '& a':{
+            textDecoration:'none',
+            color:'#fff'
         }
-    },
-    orderCheckout: {
-        '& a': {
-            textDecoration: 'none',
-            color:'white'
-        }
-    },
-    inputWidth: {
-        width: '80%',
-       }
-
+    }
 }
 export {
     styles

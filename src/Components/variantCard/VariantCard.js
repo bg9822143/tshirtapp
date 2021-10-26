@@ -8,8 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import ClearIcon from '@mui/icons-material/Clear';
 import VariantSubCard from './VariantSubCard';
 import { useDispatch } from 'react-redux';
-import { setSelectedVariant } from '../../redux/actions/actions';
-
+import { setID } from '../../actions/action';
 export default function VariantCard(props) {
     const dispatch = useDispatch();
     return (
@@ -21,7 +20,7 @@ export default function VariantCard(props) {
                 action={
                     
                     <IconButton aria-label="settings">
-                        <ClearIcon  onClick={(e)=>{dispatch(setSelectedVariant(-1));e.stopPropagation()} }/>
+                        <ClearIcon  onClick={(e)=>{dispatch(setID(-1));e.stopPropagation()} }/>
                     </IconButton>
                 }
             />

@@ -4,24 +4,19 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-evenly',
         marginTop: '10px',
-        lineHeight: '1.2',
-        flexWrap:'wrap'
+        lineHeight: '1.2'
     },
     measurementChoices: {
-        textAlign:'left',
-        display:'flex',
-        flexWrap:'wrap',
-        width:'200px',
+        textAlign: 'left',
+        marginTop:'10px',
+        width: '30%'
     },
     measurementImg: {
-        width:'400px',
+        width: '30%'
     },
     measurementdescription: {
-        width:'200px',
-        marginTop:'10px',
-        textAlign:'left',
-        paddingLeft:'10px',
-        paddingRight:'10px'}
+        width: '30%'
+    }
 }
 export {
     styles

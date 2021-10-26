@@ -19,10 +19,7 @@ const styles = {
     cardDetailingsTop:{
         width:'90%',
         margin:'15px auto',
-<<<<<<< HEAD
         fontFamily:'Cormorant Garamond serif',
-=======
->>>>>>> e71bc471a7078ce4a62f45c11807df76536fc5fe
         fontSize:'20px',
         fontWeight:'bold'
         
@@ -31,10 +28,7 @@ const styles = {
         width:'24%',
         height:'50px',
         display:'flex',
-<<<<<<< HEAD
         fontFamily: 'Titillium Web sans-serif',
-=======
->>>>>>> e71bc471a7078ce4a62f45c11807df76536fc5fe
         fontSize:'17px'
         ,marginTop:'20px'
 
